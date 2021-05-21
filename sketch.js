@@ -55,6 +55,19 @@ function draw() {
 }
 
 function keyPressed() {
+	
+	if(keyCode===LEFT_ARROW){
+	helicopterSprite.x=helicopterSprite.x-10;
+	translation={x:-10,y:0}
+	Matter.Body.translate(packageBody,translation)
+	}
+	
+	if(keyCode===RIGHT_ARROW){
+	helicopterSprite.x=helicopterSprite.x+10;
+	translation={x:+10,y:0}
+	Matter.Body.translate(packageBody,translation)
+	}
+	
 if (keyCode === DOWN_ARROW) {
 Matter.Body.setStatic(packageBody, false);    	
 }
